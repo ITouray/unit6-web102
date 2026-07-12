@@ -42,19 +42,22 @@ Here's a walkthrough of implemented user stories:
 <img src='https://s2.ezgif.com/tmp/ezgif-28fd0df21b823fdf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with EZGIF  
 <!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+https://ezgif.com/
 
 ## Notes
 
 Describe any challenges encountered while building the app.
 
+- Sharing the fetched API data across both the dashboard and detail views took some thought, since the data is fetched once at the top level and passed down as props. The detail page then filters that data by the `datetime` URL param to find the matching day.
+- Choosing the right chart types and mapping the correct data keys (`moonphase`, `temp`, `datetime`) with Recharts required some trial and error to get the axes and tooltips to display cleanly.
+
+
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2026] [Ida Touray]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
