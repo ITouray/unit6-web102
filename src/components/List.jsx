@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import "./List.css";
 
 const List = ({ data }) => {
@@ -77,6 +78,7 @@ const List = ({ data }) => {
                             <th>Temp</th>
                             <th>Time</th>
                             <th>Phase</th>
+                            <th> Details</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -87,6 +89,11 @@ const List = ({ data }) => {
                                     <td>{item.feelslikemin + " °F"}</td>
                                     <td>{item.moonrise}</td>
                                     <td>{moonEmoji(item.moonphase)}</td>
+                                    <td>
+                                        <Link to={"/" + item.datetime}>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;🔗{" "}
+                                        </Link>
+                                    </td>
                                 </tr>
                             ))
                         ) : (

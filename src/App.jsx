@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Dashboard from "./pages/Dashboard";
+import Detail from "./components/detail";
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
 function App() {
@@ -36,7 +38,10 @@ function App() {
         <Menu />
       </div>
 
-      <Dashboard data={data} />
+      <Routes>
+        <Route path="/" element={<Dashboard data={data} />} />
+        <Route path="/:datetime" element={<Detail data={data} />} />
+      </Routes>
     </div>
   );
 }
